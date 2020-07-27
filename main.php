@@ -5,7 +5,7 @@ print "ENV vars:\n";
 print_r($_ENV);
 print "Fetching http://example.com ...\n";
 $exampleComHtml = file_get_contents('http://example.com');
-var_dump(file_get_contents('apify_storage/key_value_stores/default/INPUT.json'));
+var_dump(file_get_contents('/apify_storage/key_value_stores/default/INPUT.json'));
 print "Searching for <h1> tag contents ...\n";
 preg_match_all('/<h1>(.*?)<\/h1>/', $exampleComHtml, $matches);
 print "Found: " . $matches[1][0] . "\n";
